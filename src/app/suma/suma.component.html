@@ -1,0 +1,42 @@
+<div class="jumbotron">
+    <h1 class="display-4">Suma de dos Numeros</h1>
+    <p class="lead"> Mi primer Proyecto en angular que suma numeros</p>
+
+
+
+</div>
+<div class="container">
+    <p>Sumar numeros!</p>
+    <form [formGroup]="sumaForm">
+        <div class='row'>
+            <div class='col-4'>
+                <div class='form-group mb-3"'>
+                    <label for='numero1'> Digite un numero </label>
+                    <input type='number' class="form-control" formControlName="numero1" id="numero1" name='numero1'>
+                </div>
+
+            </div>
+
+            <div class='col-4'>
+                <div class='form-group'>
+                    <label for='numero2'> Digite un numero </label>
+                    <input type='number' class="form-control" formControlName="numero2" id="numero2" name='numero2'>
+                </div>
+            </div>
+
+            <div>
+                <label>
+                    Resultado: {{sumaForm.value.resultado}}
+                </label>
+
+            </div>
+        </div>
+        <div>
+            <button (click)="sumar(sumaForm.value)" [disabled]="sumaForm.invalid" class="btn btn-primary">Sumar</button>
+        </div>
+
+
+
+    </form>
+
+</div>
